@@ -6,10 +6,33 @@
     color: #EBD16F
 }
 
+.footerLinks:hover,
 .secCol {
     color: #7c899c
 }
 
 .accent {
     color: #f4E6B9
+}
+
+.leftAligned {
+    align-self: flex-start;
+    margin-top: 2rem;
+    margin-left: .5rem;
+    margin-bottom: 0.5rem;
+}
+
+.bottomAligned {
+    margin-top: auto;
+}
+
+#footer-logo {
+    margin-bottom: 1rem;
+    max-width: 20%;
+    height: auto;
+}
+
+#joke {
+    margin-top: 0.2rem;
+    margin-bottom: 1rem;
 }

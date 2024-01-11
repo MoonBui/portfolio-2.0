@@ -3,8 +3,39 @@
 @tailwind utilities;
 :root {
     --foreground-rgb: 41, 50, 61;
+    --font-size-small: 14px;
+    --font-size-med: 16px;
+    --font-size-big: 32px;
+    --letter-spacing-small: .05rem;
+    --letter-spacing-med: .4em
 }
 
 body {
     background: rgb(var(--foreground-rgb))
+}
+
+.container {
+    color: transparent;
+    margin-left: 0;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copyright {
+    font-size: var(--font-size-small);
+    letter-spacing: var(--letter-spacing-small);
+}
+
+h2 {
+    font-size: var(--font-size-big);
+}
+
+.left-container .row .col div ul,
+.left-container .row .col div p {
+    font-size: var(--font-size-med);
+    letter-spacing: var(--letter-spacing-small);
 }

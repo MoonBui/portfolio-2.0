@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Public_Sans } from 'next/font/google'
-import Footer from './Footer'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/globals.css'
 
 const inter = Public_Sans({ subsets: ['latin'] })
@@ -23,13 +23,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    // <html lang="en">
-    //   <body className={inter.className}>{children}</body>
-    //   <Footer/>
-    // </html>
-    <>
+    <html lang="en">
       <body className={inter.className}>{children}</body>
-      <Footer/>
-    </>
+    </html>
   )
 }
