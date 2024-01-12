@@ -9,10 +9,12 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@react-email/link": "0.0.7",
         "bootstrap": "^5.3.2",
         "next": "14.0.4",
         "react": "^18",
         "react-dom": "^18",
+        "react-router-dom": "^6.21.2",
         "reactstrap": "^9.2.1"
     },
     "devDependencies": {

@@ -3,6 +3,10 @@
 @tailwind utilities;
 :root {
     --foreground-rgb: 41, 50, 61;
+    --text-color: #ebd09e;
+    --primary-color: #EBD16F;
+    --secondary-color: #7c899c;
+    --accent-color: #f4E6B9;
     --font-size-small: 14px;
     --font-size-med: 16px;
     --font-size-big: 32px;
@@ -12,6 +16,10 @@
 
 body {
     background: rgb(var(--foreground-rgb))
+}
+
+h2 {
+    font-size: var(--font-size-big);
 }
 
 .container {
@@ -30,12 +38,37 @@ body {
     letter-spacing: var(--letter-spacing-small);
 }
 
-h2 {
-    font-size: var(--font-size-big);
-}
-
 .left-container .row .col div ul,
 .left-container .row .col div p {
     font-size: var(--font-size-med);
     letter-spacing: var(--letter-spacing-small);
+}
+
+.textCol {
+    color: var(--text-color)
+}
+
+.primCol {
+    color: var(--primary-color)
+}
+
+.footerLinks:hover,
+.secCol {
+    color: var(--secondary-color)
+}
+
+.accent {
+    color: var(--accent-color)
+}
+
+.bio-container .favorites div ul {
+    letter-spacing: var(--letter-spacing-small);
+}
+
+.bio-container .favorites div ul li {
+    margin: 1.5rem
+}
+
+.favorites {
+    border-right: solid 3px var(--primary-color)
 }
