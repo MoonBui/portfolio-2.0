@@ -14,7 +14,7 @@ export const help = async (args: string[]): Promise<string> => {
       c += Object.keys(bin).sort()[i - 1] + ' ';
     }
   }
-  return `Welcome! Here are all the available commands:
+  return `Welcome to my little tech dump, where I experiment with fun stuff I can do with my computer! Here are some fun commands available to you:
 \n${c}\n
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.\n
@@ -30,12 +30,12 @@ export const repo = async (args: string[]): Promise<string> => {
 
 // About
 export const about = async (args: string[]): Promise<string> => {
-  return `Hi, I am ${config.name}. 
-Welcome to my website!
-More about me:
-'sumfetch' - short summary.
-'resume' - my latest resume.
-'readme' - my github readme.`;
+  return `Calling Earth, this is Moon! 
+Born and raised in Vietnam
+Started coding to develop games
+Switched to software and web development to deliver innovative solutions
+Currently a passionate Full Stack Developer looking for the next challenge!
+  `;
 };
 
 export const resume = async (args: string[]): Promise<string> => {

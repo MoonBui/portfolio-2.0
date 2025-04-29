@@ -1,16 +1,16 @@
 {
   "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
   "title": "LiveTerm",
-  "name": "John Doe",
-  "ascii": "liveterm",
+  "name": "Moon Bui",
+  "ascii": "moonbui",
   "social": {
-    "github": "github",
-    "linkedin": "linkedin"
+    "github": "MoonBui",
+    "linkedin": "moon-bui/"
   },
-  "email": "contact@email.com",
+  "email": "moonbui1024@gmail.com",
   "ps1_hostname": "liveterm",
   "ps1_username": "visitor",
-  "repo": "https://github.com/Cveinnt/LiveTerm",
+  "repo": "https://github.com/MoonBui",
   "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
   "donate_urls": {
     "paypal": "https://paypal.me/cveinnt",
@@ -33,7 +33,7 @@
       "green": "#319b91",
       "gray": "#88C0D0",
       "blue": "#66a2e3",
-      "red": "#fbf1c9"
+      "red": "#66a2e3"
     }
   }
 }
