@@ -5,16 +5,18 @@ import config from '../../../config.json';
 
 // Help
 export const help = async (args: string[]): Promise<string> => {
-  const commands = Object.keys(bin).sort().join(', ');
+  const commands = Object.keys(bin).sort();
   var c = '';
-  for (let i = 1; i <= Object.keys(bin).sort().length; i++) {
-    if (i % 7 === 0) {
-      c += Object.keys(bin).sort()[i - 1] + '\n';
-    } else {
-      c += Object.keys(bin).sort()[i - 1] + ' ';
+  const maxCommandLength = Math.max(...commands.map(cmd => cmd.length));
+  
+  for (let i = 1; i <= commands.length; i++) {
+    const cmd = commands[i - 1];
+    if (desc[cmd]) {
+      const padding = ' '.repeat(maxCommandLength - cmd.length);
+      c += cmd + padding + '   - ' + desc[cmd] + '\n';
     }
   }
-  return `Welcome to my little tech dump, where I experiment with fun stuff I can do with my computer! Here are some fun commands available to you:
+  return `Welcome to ${config.name}'s little tech dump, where I experiment with fun stuff I can do on my computer! Here are some fun commands available to you:
 \n${c}\n
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.\n
@@ -32,7 +34,7 @@ export const repo = async (args: string[]): Promise<string> => {
 export const about = async (args: string[]): Promise<string> => {
   return `Calling Earth, this is Moon! 
 Born and raised in Vietnam
-Started coding to develop games
+Started coding cause I loved playing games
 Switched to software and web development to deliver innovative solutions
 Currently a passionate Full Stack Developer looking for the next challenge!
   `;
@@ -152,7 +154,20 @@ export const banner = (args?: string[]): string => {
                                                                                                                                            
 
 Type 'help' to see the list of available commands.
-Type 'sumfetch' to display summary.
-Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
-`;
+<i>~ This page was adapted from <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.LiveTermUrl}" target="_blank">LiveTerm</a></u> project</i> ~`;
 };
+
+
+const desc = {
+  help: 'What you just typed to get here',
+  sumfetch: 'A short summary of who I am and what I do',
+  about: 'A not so short description of who I am and what I do',
+  repo: 'My Github repository (I spent time making this pretty please check it out)',
+  resume: 'Me on a piece of paper (which I promise is just as cool as human me)',
+  linkedin: 'My LinkedIn profile',
+  weather: 'This determines what you want to be wearing out the streets today',
+  music: 'Jam into my most recent favorite tunes!',
+  email: 'Send me an email (send please no spam)',
+  whoami: 'I don\'t know, you tell me',
+
+}

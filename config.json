@@ -1,5 +1,5 @@
 {
-  "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
+  "LiveTermUrl": "https://github.com/Cveinnt/LiveTerm",
   "title": "LiveTerm",
   "name": "Moon Bui",
   "ascii": "moonbui",
@@ -11,7 +11,7 @@
   "ps1_hostname": "liveterm",
   "ps1_username": "visitor",
   "repo": "https://github.com/MoonBui",
-  "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
+  "resume_url": "/Moon_Bui_resume.pdf",
   "donate_urls": {
     "paypal": "https://paypal.me/cveinnt",
     "patreon": "https://patreon.com/cveinnt"
