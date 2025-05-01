@@ -8,10 +8,6 @@ export const getProjects = async () => {
   return data;
 };
 
-export const getReadme = async () => {
-  const { data } = await axios.get(config.readmeUrl);
-  return data;
-};
 
 export const getWeather = async (city: string) => {
   try {
