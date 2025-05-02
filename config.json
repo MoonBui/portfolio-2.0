@@ -18,11 +18,11 @@
   },
   "colors": {
     "light": {
-      "background": "#FBF1C9",
-      "foreground": "#3C3836",
-      "yellow": "#D79921",
-      "green": "#98971A",
-      "gray": "#7C6F64",
+      "background": "#fbf1c9",
+      "foreground": "#001c42",
+      "yellow": "#001c42",
+      "green": "#CA2124",
+      "gray": "#319b91",
       "blue": "#458588",
       "red": "#CA2124"
     },
@@ -33,7 +33,7 @@
       "green": "#319b91",
       "gray": "#88C0D0",
       "blue": "#66a2e3",
-      "red": "#66a2e3"
+      "red": "#CA2124"
     }
   }
 }

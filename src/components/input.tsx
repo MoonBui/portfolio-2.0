@@ -78,6 +78,8 @@ export const Input = ({
     setCommand(value);
   };
 
+  const isDarkMode = typeof window !== 'undefined' && localStorage.getItem('theme') === 'dark';
+
   return (
     <div className="flex flex-row space-x-2">
       <label htmlFor="prompt" className="flex-shrink">
@@ -91,7 +93,7 @@ export const Input = ({
         className={`bg-light-background dark:bg-dark-background focus:outline-none flex-grow ${
           commandExists(command) || command === ''
             ? 'text-dark-green'
-            : 'text-dark-red'
+            : (isDarkMode ? 'text-dark-blue' : 'text-light-red')
         }`}
         value={command}
         onChange={onChange}

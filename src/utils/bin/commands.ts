@@ -157,6 +157,15 @@ Type 'help' to see the list of available commands.
 <i>~ This page was adapted from <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.LiveTermUrl}" target="_blank">LiveTerm</a></u> project</i> ~`;
 };
 
+export const light = async (args: string[]): Promise<void> => {
+  localStorage.setItem('theme', 'light');
+  document.documentElement.classList.remove('dark');
+};
+
+export const dark = async (args: string[]): Promise<void> => {
+  localStorage.setItem('theme', 'dark');
+  document.documentElement.classList.add('dark');
+};
 
 const desc = {
   help: 'What you just typed to get here',
@@ -169,5 +178,6 @@ const desc = {
   music: 'Jam into my most recent favorite tunes!',
   email: 'Send me an email (send please no spam)',
   whoami: 'I don\'t know, you tell me',
-
+  dark: 'Switch to dark mode',
+  light: 'Switch to light mode',
 }

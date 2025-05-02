@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/global.css';
 import Head from 'next/head';
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
+  const [isDarkMode, setIsDarkMode] = React.useState(false);
+
+  useEffect(() => {
+    // Check if dark mode is set in localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === 'dark');
+      document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      // Default to system preference
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setIsDarkMode(prefersDark);
+      document.documentElement.classList.toggle('dark', prefersDark);
+    }
+  }, []);
 
   const onClickAnywhere = () => {
     inputRef.current.focus();
@@ -25,7 +40,7 @@ const App = ({ Component, pageProps }) => {
         onClick={onClickAnywhere}
       >
         <main className="bg-light-background dark:bg-dark-background w-full h-full p-2">
-          <Component {...pageProps} inputRef={inputRef} />
+          <Component {...pageProps} inputRef={inputRef} isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         </main>
       </div>
     </>
