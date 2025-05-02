@@ -7,7 +7,7 @@ const sumfetch = async (args: string[]): Promise<string> => {
                           ░░░░░░░░░░░░░░░░░░░░                             ABOUT ME ✨
                        ░░░░░░░░░░░░░░░░░░░░░░░░                            ${config.name} - Solution Driven Engineer - Enthusiastic Communicator
                      ░░░░░░░░░░░░         ░░░░░░                           <u><a href="${config.resume_url}" target="_blank">Resume</a></u>
-                   ░░░░░░░░░░░░               ░░░░                         <u><a href="https://github.com/${config.social.github}" target="_blank">Github Repo</a></u>
+                   ░░░░░░░░░░░░               ░░░░                         <u><a href="https://github.com/${config.social.github}" target="_blank">Github Repo</a></u>                                           
                   ░░░░░░░░░░░                    ░░                       -----------
  *               ░░░░░░░░░░░                       ░                       CONTACT 
                 ░░░░░░░░░░░                                                <u><a href="mailto:${config.email}" target="_blank">Email</a></u>

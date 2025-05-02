@@ -1,6 +1,6 @@
 {
   "LiveTermUrl": "https://github.com/Cveinnt/LiveTerm",
-  "title": "LiveTerm",
+  "title": "Moon Bui's Grand Terminal",
   "name": "Moon Bui",
   "ascii": "moonbui",
   "social": {
@@ -8,7 +8,7 @@
     "linkedin": "moon-bui/"
   },
   "email": "moonbui1024@gmail.com",
-  "ps1_hostname": "liveterm",
+  "ps1_hostname": "moonbui",
   "ps1_username": "visitor",
   "repo": "https://github.com/MoonBui",
   "resume_url": "/Moon_Bui_resume.pdf",
