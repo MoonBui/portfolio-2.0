@@ -36,6 +36,7 @@ export const about = async (args: string[]): Promise<string> => {
 Born and raised in Vietnam
 Started coding cause I loved playing games
 Switched to software and web development to deliver innovative solutions
+Thrives in a fast-paced startup environment with collaborative, cat-loving humans
 Currently a passionate Full Stack Developer looking for the next challenge!
   `;
 };
@@ -52,6 +53,34 @@ here are the ways you can support my work:
 - <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
 - <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
 `;
+};
+
+// Experience
+export const experience = async (args: string[]): Promise<string> => {
+  return [
+    "Where my code left their marks (command 'resume' for the PDF form):",
+    "",
+    "Full Stack Developer — BeyondWill",
+    "01/2024 - 03/2025",
+    "",
+    '• ' + formatIndented("Responsible for new development and ongoing maintenance of key frontend and backend product features, such as dynamic navigation and Data Vault"),
+    '• ' + formatIndented("Organized internal code review sessions with contract developers to ensure seamless product feature integration at a consistent 80% sprint completion rate"),
+    '• ' + formatIndented('Independently maintained ownership over company website, including development, testing, and integration with external services for marketing and CRM, ensuring daily deployable results with 99.9% uptime'),
+    '• ' + formatIndented('Led external QA sessions and end-user workshops with marketing and design teams to identify UI/UX improvements and feature priority, driving 85% user satisfaction and maintaining high product standards'),
+    '• ' + formatIndented('Optimized single-developer deployments by implementing Test Driven Development, database management, and comprehensive unit, integration tests'),
+    "",
+    "Information and Data Solutions Intern — Eli Lilly Corporation in Indianapolis",
+    "05/2023 - 08/2023",
+    "",
+    '• ' + formatIndented('Coordinated with multiple stakeholder groups, vendor support teams, and business partners to determine and document pain points with current data staging-loading process'),
+    '• ' + formatIndented('Spearheaded backend RestAPI development for Release I of an internal web application designed to validate clinical trial datasets, creating a foundation that cut data staging time by 90% compared to existing IT processes'),
+    "",
+    "Front-end Developer Intern — Pieces.app",
+    "06/2022 - 08/2022",
+    "",
+    '• ' + formatIndented('Engineered and managed robust MVP front-end plugin features for the Pieces for Developers application, driving seamless integrations with leading software platforms like SublimeText and Slack'),
+    '• ' + formatIndented('Collaborated closely with cross-functional teams — spanning integration, development, and design — consistently delivering new software features and achieving an exceptional 90% Agile sprint completion rate')
+  ].join('\n');
 };
 
 // Contact
@@ -180,4 +209,27 @@ const desc = {
   whoami: 'I don\'t know, you tell me',
   dark: 'Switch to dark mode',
   light: 'Switch to light mode',
+  experience: 'See my past jobs and contributions'
+}
+
+function formatIndented(text: string, width = 100, indent = 2) {
+  const space = ' '.repeat(indent);
+  const words = text.split(' ');
+  let line = '';
+  let result = '';
+  let isFirstLine = true;
+
+  for (const word of words) {
+    // For the first line, don't add indent; for wrapped lines, do
+    const currentLine = isFirstLine ? line : space + line;
+    if ((currentLine + word).length > width) {
+      result += currentLine + '\n';
+      line = word;
+      isFirstLine = false;
+    } else {
+      line += (line.length === 0 ? '' : ' ') + word;
+    }
+  }
+  result += (isFirstLine ? line : space + line);
+  return result;
 }
