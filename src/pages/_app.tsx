@@ -14,7 +14,9 @@ const App = ({ Component, pageProps }) => {
       document.documentElement.classList.toggle('dark', savedTheme === 'dark');
     } else {
       // Default to system preference
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const prefersDark = window.matchMedia(
+        '(prefers-color-scheme: dark)',
+      ).matches;
       setIsDarkMode(prefersDark);
       localStorage.setItem('theme', prefersDark ? 'dark' : 'light');
       document.documentElement.classList.toggle('dark', prefersDark);
@@ -41,7 +43,12 @@ const App = ({ Component, pageProps }) => {
         onClick={onClickAnywhere}
       >
         <main className="bg-light-background dark:bg-dark-background w-full h-full p-2">
-          <Component {...pageProps} inputRef={inputRef} isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+          <Component
+            {...pageProps}
+            inputRef={inputRef}
+            isDarkMode={isDarkMode}
+            setIsDarkMode={setIsDarkMode}
+          />
         </main>
       </div>
     </>

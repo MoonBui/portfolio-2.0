@@ -7,8 +7,8 @@ import config from '../../../config.json';
 export const help = async (args: string[]): Promise<string> => {
   const commands = Object.keys(bin).sort();
   var c = '';
-  const maxCommandLength = Math.max(...commands.map(cmd => cmd.length));
-  
+  const maxCommandLength = Math.max(...commands.map((cmd) => cmd.length));
+
   for (let i = 1; i <= commands.length; i++) {
     const cmd = commands[i - 1];
     if (desc[cmd]) {
@@ -59,27 +59,54 @@ here are the ways you can support my work:
 export const experience = async (args: string[]): Promise<string> => {
   return [
     "Where my code left their marks (command 'resume' for the PDF form):",
-    "",
-    "Full Stack Developer — BeyondWill",
-    "01/2024 - 03/2025",
-    "",
-    '• ' + formatIndented("Responsible for new development and ongoing maintenance of key frontend and backend product features, such as dynamic navigation and Data Vault"),
-    '• ' + formatIndented("Organized internal code review sessions with contract developers to ensure seamless product feature integration at a consistent 80% sprint completion rate"),
-    '• ' + formatIndented('Independently maintained ownership over company website, including development, testing, and integration with external services for marketing and CRM, ensuring daily deployable results with 99.9% uptime'),
-    '• ' + formatIndented('Led external QA sessions and end-user workshops with marketing and design teams to identify UI/UX improvements and feature priority, driving 85% user satisfaction and maintaining high product standards'),
-    '• ' + formatIndented('Optimized single-developer deployments by implementing Test Driven Development, database management, and comprehensive unit, integration tests'),
-    "",
-    "Information and Data Solutions Intern — Eli Lilly Corporation in Indianapolis",
-    "05/2023 - 08/2023",
-    "",
-    '• ' + formatIndented('Coordinated with multiple stakeholder groups, vendor support teams, and business partners to determine and document pain points with current data staging-loading process'),
-    '• ' + formatIndented('Spearheaded backend RestAPI development for Release I of an internal web application designed to validate clinical trial datasets, creating a foundation that cut data staging time by 90% compared to existing IT processes'),
-    "",
-    "Front-end Developer Intern — Pieces.app",
-    "06/2022 - 08/2022",
-    "",
-    '• ' + formatIndented('Engineered and managed robust MVP front-end plugin features for the Pieces for Developers application, driving seamless integrations with leading software platforms like SublimeText and Slack'),
-    '• ' + formatIndented('Collaborated closely with cross-functional teams — spanning integration, development, and design — consistently delivering new software features and achieving an exceptional 90% Agile sprint completion rate')
+    '',
+    'Full Stack Developer — BeyondWill',
+    '01/2024 - 03/2025',
+    '',
+    '• ' +
+      formatIndented(
+        'Responsible for new development and ongoing maintenance of key frontend and backend product features, such as dynamic navigation and Data Vault',
+      ),
+    '• ' +
+      formatIndented(
+        'Organized internal code review sessions with contract developers to ensure seamless product feature integration at a consistent 80% sprint completion rate',
+      ),
+    '• ' +
+      formatIndented(
+        'Independently maintained ownership over company website, including development, testing, and integration with external services for marketing and CRM, ensuring daily deployable results with 99.9% uptime',
+      ),
+    '• ' +
+      formatIndented(
+        'Led external QA sessions and end-user workshops with marketing and design teams to identify UI/UX improvements and feature priority, driving 85% user satisfaction and maintaining high product standards',
+      ),
+    '• ' +
+      formatIndented(
+        'Optimized single-developer deployments by implementing Test Driven Development, database management, and comprehensive unit, integration tests',
+      ),
+    '',
+    'Information and Data Solutions Intern — Eli Lilly Corporation in Indianapolis',
+    '05/2023 - 08/2023',
+    '',
+    '• ' +
+      formatIndented(
+        'Coordinated with multiple stakeholder groups, vendor support teams, and business partners to determine and document pain points with current data staging-loading process',
+      ),
+    '• ' +
+      formatIndented(
+        'Spearheaded backend RestAPI development for Release I of an internal web application designed to validate clinical trial datasets, creating a foundation that cut data staging time by 90% compared to existing IT processes',
+      ),
+    '',
+    'Front-end Developer Intern — Pieces.app',
+    '06/2022 - 08/2022',
+    '',
+    '• ' +
+      formatIndented(
+        'Engineered and managed robust MVP front-end plugin features for the Pieces for Developers application, driving seamless integrations with leading software platforms like SublimeText and Slack',
+      ),
+    '• ' +
+      formatIndented(
+        'Collaborated closely with cross-functional teams — spanning integration, development, and design — consistently delivering new software features and achieving an exceptional 90% Agile sprint completion rate',
+      ),
   ].join('\n');
 };
 
@@ -201,16 +228,17 @@ const desc = {
   sumfetch: 'A short summary of who I am and what I do',
   about: 'A not so short description of who I am and what I do',
   repo: 'My Github repository (I spent time making this pretty please check it out)',
-  resume: 'Me on a piece of paper (which I promise is just as cool as human me)',
+  resume:
+    'Me on a piece of paper (which I promise is just as cool as human me)',
   linkedin: 'My LinkedIn profile',
   weather: 'This determines what you want to be wearing out the streets today',
   music: 'Jam into my most recent favorite tunes!',
   email: 'Send me an email (send please no spam)',
-  whoami: 'I don\'t know, you tell me',
+  whoami: "I don't know, you tell me",
   dark: 'Switch to dark mode',
   light: 'Switch to light mode',
-  experience: 'See my past jobs and contributions'
-}
+  experience: 'See my past jobs and contributions',
+};
 
 function formatIndented(text: string, width = 100, indent = 2) {
   const space = ' '.repeat(indent);
@@ -230,6 +258,6 @@ function formatIndented(text: string, width = 100, indent = 2) {
       line += (line.length === 0 ? '' : ' ') + word;
     }
   }
-  result += (isFirstLine ? line : space + line);
+  result += isFirstLine ? line : space + line;
   return result;
 }
