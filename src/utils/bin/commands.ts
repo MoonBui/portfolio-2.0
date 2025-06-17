@@ -21,6 +21,7 @@ export const help = async (args: string[]): Promise<string> => {
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.\n
 Type 'sumfetch' to display summary.
+*Fun fact: the light and dark mode colors are inspired by my custom mechanical keyboards colors!*
 `;
 };
 
@@ -34,10 +35,11 @@ export const repo = async (args: string[]): Promise<string> => {
 export const about = async (args: string[]): Promise<string> => {
   return `Calling Earth, this is Moon! 
 Born and raised in Vietnam
-Started coding cause I loved playing games
+Started coding cause I loved playing games (my current favorite is Monster Hunter Wilds, I want to try out Expedition 33!)
 Switched to software and web development to deliver innovative solutions
-Thrives in a fast-paced startup environment with collaborative, cat-loving humans
-Currently a passionate Full Stack Developer looking for the next challenge!
+Thrives in a fast-paced startup environment building customer-facing products
+Loves working with talented people who care about growth and the impact of their work (and cats, cats are cool too)
+Currently a passionate Full Stack Developer looking for the next challenge whilst keeping my skills sharp with side projects!
   `;
 };
 
@@ -206,9 +208,11 @@ export const banner = (args?: string[]): string => {
  ░███ ░░░  ░███ ░███ ░███░███ ░███ ░███ ░███     ░███░░░░░███ ░███ ░███  ░███ 
  ░███      ░███ ░███ ░███░███ ░███ ░███ ░███     ░███    ░███ ░███ ░███  ░███ 
  █████     █████░░██████ ░░██████  ████ █████    ███████████  ░░████████ █████
-░░░░░     ░░░░░  ░░░░░░   ░░░░░░  ░░░░ ░░░░░    ░░░░░░░░░░░    ░░░░░░░░ ░░░░░ 
+░░░░░     ░░░░░  ░░░░░░   ░░░░░░  ░░░░ ░░░░░    ░░░░░░░░░░░    ░░░░░░░░ ░░░░░  
+                                                                            
+                                                                        ~ Full Stack Developer ~
                                                                                                                                            
-
+    
 Type 'help' to see the list of available commands.
 <i>~ This page was adapted from <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.LiveTermUrl}" target="_blank">LiveTerm</a></u> project</i> ~`;
 };
